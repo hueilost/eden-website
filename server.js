@@ -1,10 +1,12 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "path";
+import livereload from "livereload";
+import connectLiveReload from "connect-livereload";
+import dbConnect from "./database/DB.js";
+import Post from "./database/models/post.js";
 const app = express();
-const PORT = 8080;
-const livereload = require("livereload");
-const connectLiveReload = require("connect-livereload");
 const liveReloadServer = livereload.createServer();
+const PORT = 8080;
 
 // Setup live reloading
 liveReloadServer.server.once("connection", () => {
@@ -27,5 +29,8 @@ app.get("/", (req, res) => {
 // Start the server
 app.listen(PORT, () => {
   console.log("Server started listening on port " + PORT);
+  dbConnect();
+  const x = new Post({ fromUser: "p", toUser: "k", tag: "k", content: "m" });
+  x.save();
   console.log(`http://127.0.0.1:${PORT}`);
 });

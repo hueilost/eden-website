@@ -1,0 +1,11 @@
+<!-- views/components/navbar.ejs -->
+<div class="flex">
+  <nav
+    class="flex justify-around items-center bg-slate-600 w-full py-8 text-white text-2xl font-semibold"
+  >
+    <NavElement>Home</NavElement>
+    <% if (slot) { %> <%= slot %> <% } else { %>
+    <NavElement>About</NavElement>
+    <% } %>
+  </nav>
+</div>

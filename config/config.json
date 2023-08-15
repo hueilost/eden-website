@@ -1,0 +1,3 @@
+{
+    "dbURL": "mongodb+srv://primary:packetcool2023@cluster0.0e0z4tn.mongodb.net/BlogPostTest?retryWrites=true&w=majority"
+}
