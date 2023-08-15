@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "watch-css": "tailwindcss -i ./assets/css/app.css -o ./static/app.css --watch"
+  },
+  "name": "ejs",
+  "version": "1.0.0",
+  "description": "Test project",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
