@@ -2,7 +2,7 @@
 
 A simple EJS template for use in web development projects
 
-# To run
+## To run
 
 ```shell
 npm run dev
