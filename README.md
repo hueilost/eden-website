@@ -12,5 +12,5 @@ npm run dev
 npm run watch-css
 ```
 
-A server should be opened up at [https://localhost:8080](https://127.0.0.1:8080).
+A server should be opened up at [http://localhost:8080](http://127.0.0.1:8080).
 The port may be modified using the `PORT` variable in the `server.js` file.
