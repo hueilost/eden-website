@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/app.css" />
+    <title>Document</title>
+  </head>
+  <!-- Root -->
+  <body>
+    <!-- <%= route %> -->
+    <% try { %> <%- include(`pages/${route}`, {params}) %> <% } catch (error) {
+    %>
+    <div
+      class="error-window px-4 py-8 m-10 border border-gray-300 rounded-lg w-fit"
+    >
+      <div class="flex font-semibold text-2xl">
+        Could not read view: '
+        <div class="font-bold"><%= route %></div>
+        '
+      </div>
+      <div class="font-light text-sm text-red-700"><%= error %></div>
+    </div>
+    <%}%>
+  </body>
+</html>

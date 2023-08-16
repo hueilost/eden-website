@@ -1,0 +1,9 @@
+<a
+  onclick="location.href = '/login'"
+  class="underline font-light hover:opacity-80 cursor-pointer"
+  >Go Forward</a
+>
+<%- include('../components/navbar', {slot: params.get("lol") || "bro"}) %>
+<div class="container flex justify-center items-center h-auto py-4 w-full">
+  <%- include('../components/card', {title: "Here is index", subtitle: "Subtitle here"}) %>
+</div>
