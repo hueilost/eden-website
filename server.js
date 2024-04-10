@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import livereload from "livereload";
 import connectLiveReload from "connect-livereload";
-import dbConnect from "./database/DB.js";
+// import dbConnect from "./database/DB.js";
 import Routes from "./routes.js";
 const app = express();
 const liveReloadServer = livereload.createServer();
@@ -28,6 +28,6 @@ app.use(Routes);
 app.listen(PORT, () => {
   console.log("Server started listening on port " + PORT);
   // Make an attempt
-  dbConnect();
+  // dbConnect();
   console.log(`http://127.0.0.1:${PORT}`);
 });
