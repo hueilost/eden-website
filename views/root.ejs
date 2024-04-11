@@ -18,14 +18,37 @@
     <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <!-- <link rel="stylesheet" href="/app.css"> -->
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="/app.css">
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
     <title>Document</title>
   </head>
   <!-- Root -->
   <body>
-    <%- include('./components/navbar') %>
-    <!-- <%= route %> -->
+    <!-- Debug -->
+    <!-- <div class="hidden"><%= JSON.stringify(locals) %></div> -->
+    <!-- End debug -->
+    <!--- Do a transparent navbar effect on the homepage -->
+    <% if(locals.route == "index" || locals.route == "index.ejs") {%>
+      <%- include('./components/navbar', {
+        transparent: true,
+        extra_style: "position: absolute; z-index: 50;",
+        dark: true
+      }) %>
+    <%} else {%>
+      <%- include('./components/navbar') %>
+    <%}%>
     <% try { %> <%- include(`pages/${route}`, {params}) %> <% } catch (error) {
     %>
     <div

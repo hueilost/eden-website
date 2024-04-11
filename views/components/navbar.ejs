@@ -1,36 +1,59 @@
 <div class="container-fluid">
   <div class="row border-top px-xl-5">
-      
-      <div style="width: 100% !important;">
-          <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-              <a href="" class="text-decoration-none" style="
-padding-right: 2.75rem;
-">
-              <h1 class="m-0"><span class="text-primary">EDEN</span> SDA HS</h1>
-          </a><a href="" class="text-decoration-none d-block d-lg-none">
-                  <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
-              </a>
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                  <div class="navbar-nav py-0">
-                      <a href="index.html" class="nav-item nav-link active">Home</a>
-                      <a href="about.html" class="nav-item nav-link">About</a>
-                      <a href="course.html" class="nav-item nav-link">Courses</a>
-                      <a href="teacher.html" class="nav-item nav-link">Teachers</a>
-                      <div class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Blog</a>
-                          <div class="dropdown-menu rounded-0 m-0">
-                              <a href="blog.html" class="dropdown-item">Blog List</a>
-                              <a href="single.html" class="dropdown-item">Blog Detail</a>
-                          </div>
-                      </div>
-                      <a href="contact.html" class="nav-item nav-link">Contact</a>
-                  </div>
-                  <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Apply Now</a>
+    <div class="hidden transparent stub"></div>
+    <div style="width: 100% !important">
+      <nav
+        class="navbar navbar-expand-lg items-center justify-center <%if(locals.transparent){%>bg-transparent<%} else {%>bg-light<%}%> <%if(locals.dark){%>navbar-dark<%} else {%>navbar-light<%}%> py-3 py-lg-0 px-0"
+        style="width: 90%;
+        <% if(locals.extra_style) {%><%=extra_style%><%}%>"
+      >
+        <a href="/" class="text-decoration-none" style="padding-right: 2.75rem">
+          <!-- The above is NOT an error -->
+          <div class="m-0 text-gray-400 text-sm lg:text-2xl font-semibold px-2">
+            <span class="text-primary">EDEN</span> SDA HS
+            <span class="text-primary">ECOURSES</span>
+          </div>
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapsable"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="hidden lg:flex collapsable navbar-collapse justify-content-between"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav py-0">
+            <a href="index.ejs" class="nav-item nav-link active">Home</a>
+            <a href="about.ejs" class="nav-item nav-link">About</a>
+            <a href="course.ejs" class="nav-item nav-link">Courses</a>
+            <a href="teacher.ejs" class="nav-item nav-link">Teachers</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                aria-expanded="false"
+                >Blog</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="blog.ejs" class="dropdown-item">Blog List</a>
+                <a href="single.ejs" class="dropdown-item">Blog Detail</a>
               </div>
-          </nav>
-      </div>
+            </div>
+            <a href="contact.ejs" class="nav-item nav-link">Contact</a>
+          </div>
+          <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href=""
+            >Apply Now</a
+          >
+        </div>
+      </nav>
+    </div>
   </div>
 </div>
